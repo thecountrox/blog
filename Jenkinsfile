@@ -24,7 +24,7 @@ pipeline {
 
             steps {
                 echo 'Building Static assets inside container...'
-                sh 'zola build --output-dir public'
+                sh 'zola build --force --output-dir public'
             }
             post {
                 success {

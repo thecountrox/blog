@@ -1,3 +1,0 @@
-FROM jauderho/zola
-WORKDIR /site
-CMD zola build --output-dir public

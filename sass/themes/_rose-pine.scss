@@ -1,0 +1,40 @@
+:root {
+  --bg-color: #191724;
+  --fg-color: #e0def4;
+  --fg-muted-1: rgba(224, 222, 244, 0.05);
+  --fg-muted-2: rgba(224, 222, 244, 0.1);
+  --fg-muted-3: rgba(224, 222, 244, 0.2);
+  --fg-muted-4: rgba(224, 222, 244, 0.5);
+  --fg-muted-5: rgba(224, 222, 244, 0.6);
+  --glass-bg: rgba(25, 23, 36, 0.7);
+  --blue-fg: #9ccfd8;
+  --red-fg: #eb6f92;
+  --yellow-fg: #f6c177;
+  --green-fg: #3e8fb0;
+  --purple-fg: #c4a7e7;
+  --accent-color: #eb6f92;
+}
+
+h1[id]::before,
+h2[id]::before,
+h3[id]::before,
+h4[id]::before,
+h5[id]::before,
+h6[id]::before {
+  content: "#";
+  margin-right: 0.5em;
+  color: var(--accent-color); // optional styling
+  font-weight: normal;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+h1[id]:hover::before,
+h2[id]:hover::before,
+h3[id]:hover::before,
+h4[id]:hover::before,
+h5[id]:hover::before,
+h6[id]:hover::before {
+  opacity: 1;
+  cursor: pointer;
+}

@@ -1,0 +1,74 @@
+{%- set rel_attributes = macros_rel_attributes::rel_attributes() | trim -%}
+
+<footer id="site-footer">
+	{%- if config.extra.footer.links %}
+		<nav>
+			<ul>
+				{%- for link in config.extra.footer.links %}
+				{%- if link.url is matching('https?://') %}
+					<li>
+						<a href="{{ link.url }}" rel="{{ rel_attributes }}" class="external">
+							{{- macros_translate::translate(key=link.name, default=link.name, language_strings=language_strings) -}}
+						</a>
+					</li>
+				{%- else %}
+					<li>
+						<a href="{{ get_url(path=link.url, lang=lang)}}"
+							{%- if current_url | default(value='/') | trim_end_matches(pat='/') | safe == get_url(path=link.url, lang=lang) | trim_end_matches(pat='/') | safe -%}
+								class="active"
+							{%- endif -%}>
+							{{- macros_translate::translate(key=link.name, default=link.name, language_strings=language_strings) -}}
+						</a>
+					</li>
+				{%- endif %}
+			{%- endfor %}
+			</ul>
+		</nav>
+	{%- endif %}
+
+	{%- if config.extra.footer.show_copyright %}
+		{%- if config.extra.footer.copyright %}
+			{{ config.extra.footer.copyright | markdown | safe }}
+		{%- else %}
+			<p>&copy; {{ config.title }}, {{ now() | date(format="%Y") }}</p>
+		{%- endif %}
+	{%- endif %}
+
+	{%- if config.extra.source_url and config.extra.footer.show_source %}
+		<p>
+			<a class="external" href="{{ config.extra.source_url }}" rel="{{ rel_attributes }}">
+				{{- macros_translate::translate(key="source", default="Website source", language_strings=language_strings) -}}
+			</a>
+		</p>
+	{%- endif %}
+
+	{%- if config.extra.footer.socials %}
+		<ul id="socials">
+			{%- for link in config.extra.footer.socials %}
+				<li>
+					<a href="{{ link.url | safe }}" rel="{{ rel_attributes }} me" title="{{ link.name }}">
+						<i class="icon" style='--icon: url("data:image/svg+xml,{{ link.icon }}")'></i>
+						<span>{{ link.name }}</span>
+					</a>
+				</li>
+			{%- endfor %}
+		</ul>
+	{%- endif %}
+	<div class="hr-decor"><span>✦</span></div>
+
+	<div class="webring-container">
+	<div class="webring-badge">
+		<a href="https://iitm-paradox.github.io/webring/ryu/previous" target="_blank" rel="noopener noreferrer">&larr;</a>
+		<a href="https://iitm-paradox.github.io/webring/" target="_blank" rel="noopener noreferrer">WebOps Webring</a>
+		<a href="https://iitm-paradox.github.io/webring/ryu/next" target="_blank" rel="noopener noreferrer">&rarr;</a>
+	</div>
+
+	<div class="webring-badge">
+		<a href="https://ctp-webr.ing/ryu/previous" target="_blank" rel="noopener noreferrer">&larr;</a>
+		<a href="https://ctp-webr.ing/" target="_blank" rel="noopener noreferrer">Catppuccin Webring</a>
+		<a href="https://ctp-webr.ing/ryu/next" target="_blank" rel="noopener noreferrer">&rarr;</a>
+	</div>
+	</div>
+
+
+</footer>

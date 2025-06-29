@@ -1,0 +1,45 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="{{ config.description }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="{{ config.extra.accent_color | default(value='#9a9996') | safe }}" />
+    {% if config.extra.accent_color_dark %}
+        <meta name="theme-color" content="{{ config.extra.accent_color_dark | safe }}" media="(prefers-color-scheme:dark)" />
+    {% endif %}
+    <title>{% include "partials/title.html" %}</title>
+    <link rel="canonical" href="{{ current_url | default(value='/') | safe }}" />
+    {% if config.generate_feeds and config.feed_filenames %}
+        {% for feed in config.feed_filenames %}
+            {% if feed == "atom.xml" %}
+                <link rel="alternate" type="application/atom+xml" title="{{ config.title }} - Atom Feed" href="{{ get_url(path=feed) | safe }}">
+            {% elif feed == "rss.xml" %}
+                <link rel="alternate" type="application/rss+xml" title="{{ config.title }} - RSS Feed" href="{{ get_url(path=feed) | safe }}">
+            {% else %}
+                <link rel="alternate" href="{{ get_url(path=feed) | safe }}">
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+    {% include "partials/variables.html" %}
+    {% set styles = ["style.css"] %}
+    {% for style in styles %}
+        <link type="text/css" rel="stylesheet" href="{{ get_url(path=style) | safe }}" />
+    {% endfor %}
+    {% set scripts = ["closable.js"] %}
+    {% if config.build_search_index %}
+        {% set scripts = scripts | concat(with=["elasticlunr.min.js", "search-elasticlunr.js"]) %}
+    {% endif %}
+    {% if config.extra.nav.show_theme_switcher %}
+        {% set scripts = scripts | concat(with=["theme-switcher.js"]) %}
+    {% endif %}
+    {% for script in scripts %}
+        <script type="text/javascript" defer src="{{ get_url(path=script) | safe }}"></script>
+    {% endfor %}
+    <meta property="og:site_name" content="{{ config.title }}" />
+    <meta property="og:title" content="{% include 'partials/title.html' %}" />
+    <meta property="og:url" content="{{ current_url | default(value='/') | safe }}" />
+    <meta property="og:description" content="{% include 'partials/description.html' %}" />
+    {% if config.extra.card is not defined or config.extra.card != false %}
+        <meta property="og:image" content="{% include 'partials/card.html' %}" />
+    {% endif %}
+    <meta property="og:locale" content="{{ macros_translate::translate(key='date_locale', default='en_US', language_strings=language_strings) }}" />
+</head>

@@ -1,0 +1,110 @@
+#theme-switcher {
+  position: relative;
+  box-shadow: none;
+  border-radius: 0;
+  background-color: transparent;
+  padding: 0;
+
+  summary {
+    display: inline-block;
+    transition: var(--transition);
+    box-shadow: var(--edge-highlight);
+    border-radius: 999px;
+    background-color: var(--fg-muted-1); /* Overlay2: #9399b2 */
+    padding: 0.5rem;
+    color: var(--fg-muted-4); /* Surface2: #585b70 */
+    line-height: 0;
+    cursor: pointer;
+    list-style: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::before {
+      display: none;
+    }
+
+    &:hover {
+      background-color: var(--fg-muted-2); /* Overlay1: #7f849c */
+      color: var(--fg-muted-5); /* Subtext1: #bac2de */
+    }
+
+    &:active {
+      transform: var(--active);
+    }
+
+    .icon {
+      -webkit-mask-image: var(--icon-palette);
+      mask-image: var(--icon-palette);
+      transition: var(--transition);
+      display: block;
+      width: 1rem;
+      height: 1rem;
+      background-color: currentColor;
+    }
+  }
+
+  &[open] summary ~ * {
+    transform-origin: bottom right;
+    animation: theme-dropdown-open var(--transition);
+
+    @keyframes theme-dropdown-open {
+      from {
+        transform: scale(0.5) translate(1rem, 1rem);
+        opacity: 0;
+      }
+    }
+  }
+
+  summary + div {
+    -webkit-backdrop-filter: var(--blur);
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    z-index: 1000;
+    backdrop-filter: var(--blur);
+    inset-block-end: 0;
+    inset-inline-end: 3rem;
+    box-shadow: var(--edge-highlight), var(--shadow-glass);
+    border-radius: var(--rounded-corner);
+    background-color: var(--glass-bg); /* Surface0 with transparency */
+    padding: 1rem;
+    width: min(250px, calc(90vw - 3rem));
+    max-height: 50vh;
+
+    strong.title {
+      color: var(--fg-muted-5); /* Subtext1: #bac2de for better contrast */
+      margin-bottom: 0.75rem;
+    }
+
+    .theme-options {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+
+      button {
+        appearance: none;
+        border: none;
+        background: transparent;
+        color: var(--fg-muted-5); /* Subtext1: #bac2de */
+        padding: 0.5rem 0.75rem;
+        border-radius: var(--rounded-corner);
+        cursor: pointer;
+        transition: var(--transition);
+        text-align: left;
+        font-size: var(--font-size-small);
+
+        &:hover {
+          background-color: var(--fg-muted-1); /* Overlay2: #9399b2 */
+          color: var(--fg-color); /* Text: #cdd6f4 */
+        }
+
+        &.active {
+          background-color: var(--iris); /* Lavender: #b4befe */
+          color: var(--bg-color); /* Mantle: #181825 */
+        }
+      }
+    }
+  }
+}

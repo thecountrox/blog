@@ -1,8 +1,6 @@
 +++
 title = "home"
 description = "init"
-[extra]
-webring = ["catppuccin"]
 
 +++
 
@@ -17,14 +15,10 @@ webring = ["catppuccin"]
 
 {% end %}
 
-# HAIIIIII!
+# HELLO!!
 
-likes:
-- cats everywhere 
-- midnight snacks
-- phonk
-- good documentation
-- ricing my machine to its core 
+This is a test
 
-dislikes:
-- people who skip the `man` page
+- I wanna kill myself
+- I love cars
+- Eurobeat is peak

@@ -19,7 +19,6 @@ pipeline {
                 dockerfile {
                     filename 'Dockerfile.build'
                     reuseNode true
-                    label 'zola-builder'
                 }
             }
 

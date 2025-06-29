@@ -19,6 +19,7 @@ pipeline {
                 docker {
                     image 'ghcr.io/getzola/zola:v0.20.0'
                     reuseNode true
+                    args '--entrypoint=sh -u root:root'
                 }
             }
 

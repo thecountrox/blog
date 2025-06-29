@@ -17,7 +17,7 @@ pipeline {
         stage('Build Static Assets') {
             agent {
                 docker {
-                    image 'jauderho/zola'
+                    image 'ghcr.io/getzola/zola:v0.20.0'
                     reuseNode true
                 }
             }

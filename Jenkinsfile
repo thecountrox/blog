@@ -20,7 +20,6 @@ pipeline {
                     filename 'Dockerfile.build'
                     reuseNode true
                     label 'zola-builder'
-                    args '--entrypoint=cat -u root:root'
                 }
             }
 

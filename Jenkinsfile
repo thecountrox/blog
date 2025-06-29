@@ -16,9 +16,10 @@ pipeline {
 
         stage('Build Static Assets') {
             agent {
-                docker {
-                    image 'ghcr.io/getzola/zola:v0.20.0'
+                dockerfile {
+                    filename 'Dockerfile.build'
                     reuseNode true
+                    label 'zola-builder'
                     args '--entrypoint=cat -u root:root'
                 }
             }

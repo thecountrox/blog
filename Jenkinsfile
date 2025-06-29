@@ -62,7 +62,7 @@ pipeline {
                             echo 'Artifact unstashed successfully.'
 
                             echo 'Archiving artifact: static assets'
-                            archiveArtifacts artifacts: 'public', fingerprint: true
+                            archiveArtifacts artifacts: 'public/**', fingerprint: true
                             echo 'Artifact archived successfully.'
                         }
                     catch (err) {

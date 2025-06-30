@@ -12,7 +12,7 @@ toc = true
 toc_inline = true
 toc_ordered = true
 disclaimer = """
-- Real men test in production
+- real men test in production
 """
 +++
 

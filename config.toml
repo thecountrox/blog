@@ -10,6 +10,7 @@ feed_filenames = ["rss.xml", "atom.xml"]
 
 default_language = "en"
 
+taxonomies = [{ name = "tags", feed = true }, { name = "categories"}]
 
 # aliases = []
 # slug = "blog"
@@ -47,5 +48,3 @@ show_backlinks = true
 source_url = "https://git.thecount.eu.org/thecountrox/blog"
 go_to_top = true
 toc_sidebar = true
-
-taxonomies = [{ name = "tags", rss = true }, { name = "categories", paginate_by = 10 }]

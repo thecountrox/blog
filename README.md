@@ -1,6 +1,6 @@
-# init 
+# Blog
 ### 
 
 --- 
 
-thanks duckquill and catppuccin 
+Static blog based on zola

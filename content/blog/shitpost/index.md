@@ -1,4 +1,3 @@
-
 +++
 authors = ["Prajol David"]
 title = "Feeling funny"
@@ -8,8 +7,8 @@ updated = "2025-06-30"
 [taxonomies]
 tags = ["shitpost", "daily"]
 categories = ["personal"]
-[extra]
 
+[extra]
 toc = true
 toc_inline = true
 toc_ordered = true

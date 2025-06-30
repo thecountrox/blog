@@ -6,6 +6,8 @@ description = "Its a shit day in college lmao"
 date = 2025-06-30
 updated = "2025-06-30"
 [taxonomies]
+tags = ["shitpost", "daily"]
+categories = ["personal"]
 [extra]
 
 toc = true

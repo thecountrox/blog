@@ -5,9 +5,10 @@ description = "I introduce myself and what I have been working on"
 date = 2025-06-30
 updated = "2025-06-30"
 [taxonomies]
-tags = ["about", "intro", "personal"]
-categories = ["initial"]
+tags = ["about", "intro" ]
+categories = ["personal"]
 
+[extra]
 toc = true
 toc_inline = true
 toc_ordered = true

@@ -3,6 +3,7 @@ authors = ["Prajol David"]
 title = "The Internet is so cool"
 description = "I yap about how cool the internet is made and how great it is architecture wise"
 date = 2025-07-04
+edited = 11:25
 [taxonomies]
 tags = ["internet", "architecture" , "lore"]
 categories = ["information", "lore"]
@@ -53,7 +54,7 @@ Are you a web developer and have tried to optimize this but its always that slow
 Its just TCP showing its age. Yeah TCP is cool, I **just** talked about it.
 BUT: **QUIC is UDP with handshake**
 
-QUIC is *QUIC*ly reshaping the networking landscape with almost all new *BIG* networking projects often times opt for QUIC protocols (ex: (Syncthing)[https://syncthing.net/])
+QUIC is *QUIC*ly reshaping the networking landscape with almost all new *BIG* networking projects often times opt for QUIC protocols (ex: [Syncthing](https://syncthing.net/)
 
 TCP is old, has security issues that has been discovered by *very smart people*, The 3-way handshake is "extremely slow" for today's standards (it is LITERALLY the only thing holding you back from **instant** page loads)
 

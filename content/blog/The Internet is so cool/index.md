@@ -3,7 +3,7 @@ authors = ["Prajol David"]
 title = "The Internet is so cool"
 description = "I yap about how cool the internet is made and how great it is architecture wise"
 date = 2025-07-04
-edited = 11:25
+edited = 2025-07-04
 [taxonomies]
 tags = ["internet", "architecture" , "lore"]
 categories = ["information", "lore"]

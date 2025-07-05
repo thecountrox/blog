@@ -48,7 +48,7 @@ pipeline {
                 sh "docker rm ${env.CONTAINER_NAME} || true"
 
                 echo 'Starting new container...'
-                sh "docker run -d --name ${env.CONTAINER_NAME} -p 8083:80 ${env.DEPLOY_IMAGE_NAME}:${env.DEPLOY_IMAGE_TAG}"
+                sh "docker run -d --restart always --name ${env.CONTAINER_NAME} -p 8083:80 ${env.DEPLOY_IMAGE_NAME}:${env.DEPLOY_IMAGE_TAG}"
             }
 
             post {

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>thecountrox - daily</title>
+      <link>https://blog.thecount.eu.org</link>
+      <description>Tech, Linux, Devops and Programming</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://blog.thecount.eu.org/tags/daily/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Mon, 30 Jun 2025 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Feeling funny</title>
+          <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
+          <author>Prajol David</author>
+          <link>https://blog.thecount.eu.org/blog/shitpost/</link>
+          <guid>https://blog.thecount.eu.org/blog/shitpost/</guid>
+          <description xml:base="https://blog.thecount.eu.org/blog/shitpost/">&lt;h2 id=&quot;hello&quot;&gt;Hello&lt;&#x2F;h2&gt;
+&lt;p&gt;What is the purpose of life, if it can be taken so easily.&lt;&#x2F;p&gt;
+</description>
+      </item>
+    </channel>
+</rss>

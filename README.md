@@ -11,10 +11,32 @@ This blog is set up with automated deployment workflows:
 ### GitHub Pages (Recommended)
 The site automatically deploys to GitHub Pages when you push to the `main` or `master` branch.
 
-**Setup:**
-1. Go to your repository Settings → Pages
-2. Set Source to "GitHub Actions"
-3. Push to main/master branch or trigger manually via Actions tab
+**Step-by-Step Setup:**
+
+1. **Merge this PR** to your `main` or `master` branch
+
+2. **Enable GitHub Pages:**
+   - Go to your repository on GitHub
+   - Click **Settings** (top menu)
+   - Click **Pages** (left sidebar under "Code and automation")
+   - Under **Build and deployment**:
+     - Set **Source** to "**GitHub Actions**"
+   - Click **Save** (if button appears)
+
+3. **Trigger Deployment:**
+   - Option A: The workflow will automatically run when you merge/push to main
+   - Option B: Manually trigger from **Actions** tab → **Deploy to GitHub Pages** → **Run workflow**
+
+4. **Access Your Site:**
+   - After deployment completes (~1-2 minutes), your site will be available at:
+     - `https://thecountrox.github.io/blog/` (default)
+     - `https://blog.thecount.eu.org/` (if custom domain DNS is configured)
+
+5. **Custom Domain (Optional):**
+   - Your CNAME file is already configured for `blog.thecount.eu.org`
+   - Add DNS records at your domain provider:
+     - Type: `CNAME`, Name: `blog`, Value: `thecountrox.github.io`
+   - GitHub will automatically detect the CNAME file and configure the custom domain
 
 ### Docker Image
 Alternatively, a Docker image is built and pushed to GitHub Container Registry.

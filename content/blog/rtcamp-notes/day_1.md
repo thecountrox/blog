@@ -24,7 +24,7 @@ ERPNext is a free, open-source, comprehensive business management software (ERP)
 
 ERPNext is amazing because its pretty much an end to end solution for Business Management for most use cases.
 
-## Things Im covering:
+## Things Im covering
 
 1. Installation of Frappe using [_Frappe Manager_](https://github.com/rtCamp/Frappe-Manager)
 
@@ -36,4 +36,4 @@ ERPNext is amazing because its pretty much an end to end solution for Business M
 - Workspaces
 - Client Side Scripting
 
-## Notes:
+## Notes

@@ -17,8 +17,8 @@ description = "init"
 
 # HELLO!!
 
-This is a test
+Welcome to my blogsite!! :3
 
-- I wanna kill myself
-- I love cars
-- Eurobeat is peak
+This is where I store my ramblings and anything I feel the need to publish on the internet
+
+Feel free to look around!

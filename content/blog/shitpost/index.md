@@ -1,7 +1,7 @@
 +++
 authors = ["Prajol David"]
 title = "Feeling funny"
-description = "Its a shit day in college lmao"
+description = "Its a fine day in college; Hello World!"
 date = 2025-06-30
 updated = "2025-06-30"
 [taxonomies]
@@ -12,10 +12,8 @@ categories = ["personal"]
 toc = true
 toc_inline = true
 toc_ordered = true
-disclaimer = """
-- real men test in production
-"""
 +++
 
 ## Hello
-What is the purpose of life, if it can be taken so easily.
+
+Im currently making this post in college, The air seems chill and everything is working well.
